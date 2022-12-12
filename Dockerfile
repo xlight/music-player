@@ -3,6 +3,7 @@ WORKDIR /var/www/html
 COPY / /var/www/html/
 RUN apk add --no-cache nginx \
     && mkdir -p /run/nginx \
+    && mkdir -p  /etc/nginx/http.d/ \
     && chown -R www-data:www-data cache/ \
     && mv default.conf /etc/nginx/httpd.d/ \
     && mv php.ini /usr/local/etc/php/
