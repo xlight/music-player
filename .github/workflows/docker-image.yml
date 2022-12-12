@@ -30,4 +30,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: xlight/music-playr:latest
+          tags: xlight/music-player:latest
