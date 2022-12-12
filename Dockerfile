@@ -4,8 +4,8 @@ COPY / /var/www/html/
 RUN apk add --no-cache nginx \
     && mkdir -p /run/nginx \
     && chown -R www-data:www-data cache/ \
-    && mv default.conf /etc/nginx/conf.d \
-    && mv php.ini /usr/local/etc/php
+    && mv default.conf /etc/nginx/httpd.d/ \
+    && mv php.ini /usr/local/etc/php/
 
 EXPOSE 264
 # Persistent config file and cache
