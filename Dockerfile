@@ -5,7 +5,7 @@ RUN apk add --no-cache nginx \
     && mkdir -p /run/nginx \
     && mkdir -p  /etc/nginx/http.d/ \
     && chown -R www-data:www-data cache/ \
-    && mv default.conf /etc/nginx/httpd.d/ \
+    && mv default.conf /etc/nginx/http.d/ \
     && mv php.ini /usr/local/etc/php/
 
 EXPOSE 264
